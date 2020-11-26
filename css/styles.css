@@ -137,7 +137,15 @@ img {
 /* ========== HERO ========== */
 .hero {
   background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main/hero.jpg);
+  width: 1600px;
   height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .modal-btn {
@@ -206,6 +214,18 @@ img {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
+
+.about__list-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+  background-color: #f5f4fa;
+}
 /* ========== END ABOUT ========== */
 
 /* ========== WORKS ========== */
@@ -272,6 +292,12 @@ img {
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin-top: 10px;
+}
+
+.team__list-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team__list-item:not(:last-child) {
