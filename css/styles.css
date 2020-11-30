@@ -5,6 +5,7 @@
   --headers-color: #212121;
   --text-color: #757575;
   --hero-color: #ffffff;
+  --social-color: #afb1b8;
   --footer__address-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -226,6 +227,22 @@ img {
   background-position: center;
   background-color: #f5f4fa;
 }
+
+.about__list-antenna::before {
+  background-image: url(../images/main/antenna.svg);
+}
+
+.about__list-clock::before {
+  background-image: url(../images/main/clock.svg);
+}
+
+.about__list-diagram::before {
+  background-image: url(../images/main/diagram.svg);
+}
+
+.about__list-astronaut::before {
+  background-image: url(../images/main/astronaut.svg);
+}
 /* ========== END ABOUT ========== */
 
 /* ========== WORKS ========== */
@@ -259,6 +276,10 @@ img {
 .team .container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.team {
+  background-color: #f5f4fa;
 }
 
 .team__header {
@@ -295,6 +316,7 @@ img {
 }
 
 .team__list-item {
+  background-color: var(--hero-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -303,7 +325,105 @@ img {
 .team__list-item:not(:last-child) {
   margin-right: 30px;
 }
+
+.social__list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.social__list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.social__list-link:hover {
+  background-color: var(--accent-color);
+}
+
+.social__list-link:hover .social__list-svg {
+  fill: var(--hero-color);
+}
+
+.social__list-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-color);
+}
+
 /* ========== END TEAM ========== */
+
+/* ========== CLIENTS ========== */
+.clients__header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 94px;
+  margin-bottom: 50px;
+}
+
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients__list-item {
+  padding-bottom: 94px;
+}
+
+.clients__list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__list-item::before {
+  display: block;
+  content: "";
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+}
+
+.clients__list-logo1::before {
+  background-image: url(../images/main/logo1.svg);
+}
+
+.clients__list-logo2::before {
+  background-image: url(../images/main/logo2.svg);
+}
+
+.clients__list-logo3::before {
+  background-image: url(../images/main/logo3.svg);
+}
+
+.clients__list-logo4::before {
+  background-image: url(../images/main/logo4.svg);
+}
+
+.clients__list-logo5::before {
+  background-image: url(../images/main/logo5.svg);
+}
+
+.clients__list-logo6::before {
+  background-image: url(../images/main/logo6.svg);
+}
+
+/* ========== END CLIENTS ========== */
 
 /* ========== FOOTER ========== */
 .footer {
@@ -311,6 +431,7 @@ img {
 }
 
 .footer .container {
+  display: flex;
   padding: 60px 0px;
 }
 
@@ -347,6 +468,14 @@ img {
 
 .footer__address-item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer__social-agit {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* ========== END FOOTER ========== */
