@@ -6,12 +6,22 @@
   --text-color: #757575;
   --hero-color: #ffffff;
   --social-color: #afb1b8;
+  --about-color: #f5f4fa;
   --footer__address-color: rgba(255, 255, 255, 0.6);
 }
 
-*,
-*::before,
-*::after {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -106,6 +116,10 @@ img {
   color: var(--headers-color);
 }
 
+.navigation__list-item .active {
+  color: var(--accent-color);
+}
+
 .navigation__list-link:hover,
 .address__list-link:hover,
 .navigation__list-link:focus,
@@ -133,6 +147,20 @@ img {
 .address__list-link {
   color: var(--text-color);
 }
+
+.address__list-svg {
+  display: inline-block;
+  align-items: center;
+  background-size: contain;
+  background-position: center;
+  margin-right: 10px;
+  fill: var(--text-color);
+}
+
+.address__list-link:hover .address__list-svg {
+  fill: var(--accent-color);
+}
+
 /* ========== END HEADER ========== */
 
 /* ========== HERO ========== */
@@ -187,11 +215,12 @@ img {
 
 .about__list {
   display: flex;
-  padding-top: 94px;
+  flex-wrap: wrap;
+  margin-left: -30px;
 }
 
 .about__list-header {
-  margin-bottom: 10px;
+  margin-top: 30px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142;
@@ -201,14 +230,12 @@ img {
 }
 
 .about__list-item {
-  width: 270px;
-}
-
-.about__list-item:not(:last-child) {
-  margin-right: 30px;
+  margin-left: 30px;
+  flex-basis: calc(100% / 4 - 30px);
 }
 
 .about__list-text {
+  margin-top: 10px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -216,33 +243,15 @@ img {
   color: var(--text-color);
 }
 
-.about__list-item::before {
-  display: block;
-  content: "";
-  height: 120px;
+.about__list-svg {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border-radius: 4px;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-size: 70px 70px;
-  background-position: center;
-  background-color: #f5f4fa;
+  background-color: var(--about-color);
 }
 
-.about__list-antenna::before {
-  background-image: url(../images/main/antenna.svg);
-}
-
-.about__list-clock::before {
-  background-image: url(../images/main/clock.svg);
-}
-
-.about__list-diagram::before {
-  background-image: url(../images/main/diagram.svg);
-}
-
-.about__list-astronaut::before {
-  background-image: url(../images/main/astronaut.svg);
-}
 /* ========== END ABOUT ========== */
 
 /* ========== WORKS ========== */
@@ -251,12 +260,11 @@ img {
   flex-wrap: wrap;
 }
 
-.works__list-item {
+.works {
   padding-bottom: 94px;
 }
 
 .works__header {
-  padding-top: 94px;
   margin: 0 auto;
 }
 
@@ -283,14 +291,12 @@ img {
 }
 
 .team__header {
-  padding-top: 94px;
   margin: 0 auto;
 }
 
 .team__list {
   display: flex;
   padding-top: 50px;
-  padding-bottom: 94px;
 }
 
 .team__name {
@@ -301,7 +307,6 @@ img {
   line-height: 1.188;
   letter-spacing: 0.03em;
   color: var(--headers-color);
-  margin-top: 30px;
 }
 
 .team__work {
@@ -326,15 +331,14 @@ img {
   margin-right: 30px;
 }
 
-.social__list-item:not(:last-child) {
-  margin-right: 10px;
+.team__info {
+  padding: 30px 32px;
 }
 
 .social__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 16px;
-  margin-bottom: 30px;
 }
 
 .social__list-link {
@@ -364,13 +368,13 @@ img {
 /* ========== END TEAM ========== */
 
 /* ========== CLIENTS ========== */
+
 .clients__header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.167;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -379,48 +383,32 @@ img {
   justify-content: space-between;
 }
 
-.clients__list-item {
-  padding-bottom: 94px;
+.clients__list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--social-color);
+  border-radius: 4px;
+}
+
+.clients__list-svg {
+  fill: var(--social-color);
+}
+
+.clients__list-link:hover,
+.clients__list-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients__list-link:hover .clients__list-svg,
+.clients__list-link:focus .clients__list-svg {
+  fill: var(--accent-color);
 }
 
 .clients__list-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.clients__list-item::before {
-  display: block;
-  content: "";
-  width: 170px;
-  height: 90px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-size: 70px 70px;
-  background-position: center;
-}
-
-.clients__list-logo1::before {
-  background-image: url(../images/main/logo1.svg);
-}
-
-.clients__list-logo2::before {
-  background-image: url(../images/main/logo2.svg);
-}
-
-.clients__list-logo3::before {
-  background-image: url(../images/main/logo3.svg);
-}
-
-.clients__list-logo4::before {
-  background-image: url(../images/main/logo4.svg);
-}
-
-.clients__list-logo5::before {
-  background-image: url(../images/main/logo5.svg);
-}
-
-.clients__list-logo6::before {
-  background-image: url(../images/main/logo6.svg);
 }
 
 /* ========== END CLIENTS ========== */
@@ -476,6 +464,10 @@ img {
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--hero-color);
 }
 
-/* ========== END FOOTER ========== */
+.footer__social-list {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* ========== END FOOTER ========== */ ;
