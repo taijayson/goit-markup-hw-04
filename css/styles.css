@@ -157,7 +157,8 @@ img {
   fill: var(--text-color);
 }
 
-.address__list-link:hover .address__list-svg {
+.address__list-link:hover .address__list-svg,
+.address__list-link:focus .address__list-svg {
   fill: var(--accent-color);
 }
 
@@ -171,7 +172,7 @@ img {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/main/hero.jpg);
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,11 +352,13 @@ img {
   background-color: #ffffff;
 }
 
-.social__list-link:hover {
+.social__list-link:hover,
+.social__list-link:focus {
   background-color: var(--accent-color);
 }
 
-.social__list-link:hover .social__list-svg {
+.social__list-link:hover .social__list-svg,
+.social__list-link:focus .social__list-svg {
   fill: var(--hero-color);
 }
 
@@ -432,6 +435,10 @@ img {
   color: var(--hero-color);
 }
 
+.footer__address-wrapper {
+  margin-right: 70px;
+}
+
 .footer__address-map {
   font-style: normal;
   font-weight: 400;
@@ -469,5 +476,13 @@ img {
 
 .footer__social-list {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.footer__social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer__social-svg {
+  fill: var(--hero-color);
 }
 /* ========== END FOOTER ========== */ ;
